@@ -61,7 +61,18 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				'rebel-red': 'hsl(var(--rebel-red))',
+				'electric-purple': 'hsl(var(--electric-purple))',
+				'dark-base': 'hsl(var(--dark-base))',
+				'dark-surface': 'hsl(var(--dark-surface))',
+				'dark-highlight': 'hsl(var(--dark-highlight))',
+				'text-secondary': 'hsl(var(--text-secondary))'
+			},
+			fontFamily: {
+				'sans': ['Inter', 'system-ui', 'sans-serif'],
+				'heading': ['Bebas Neue', 'Inter', 'sans-serif'],
+				'mono': ['Rubik Mono One', 'monospace']
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

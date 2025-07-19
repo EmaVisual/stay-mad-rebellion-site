@@ -47,10 +47,10 @@ All colors MUST be HSL.
     --dark-highlight: 0 0% 0%;
     --text-secondary: 0 0% 80%;
     
-    /* Gradients */
-    --gradient-rebel: linear-gradient(135deg, hsl(var(--rebel-red)), hsl(var(--electric-purple)));
-    --gradient-dark: linear-gradient(180deg, hsl(var(--dark-base)), hsl(var(--dark-highlight)));
-    --gradient-glow: radial-gradient(circle, hsl(var(--rebel-red) / 0.3), transparent);
+    /* Solid colors replacing gradients */
+    --solid-rebel: hsl(var(--rebel-red));
+    --solid-dark: hsl(var(--dark-base));
+    --solid-purple: hsl(var(--electric-purple));
     
     /* Shadows */
     --shadow-rebel: 0 10px 30px -10px hsl(var(--rebel-red) / 0.5);
@@ -132,26 +132,26 @@ All colors MUST be HSL.
 @layer components {
   /* Button Variants */
   .btn-rebel {
-    @apply bg-primary text-primary-foreground px-8 py-3 rounded-lg font-bold 
+    @apply bg-primary text-primary-foreground px-8 py-3 font-bold 
            hover:shadow-[var(--shadow-glow)] hover:scale-105 
            transition-[var(--transition-smooth)] border border-primary/20;
   }
   
   .btn-secondary {
-    @apply bg-secondary text-secondary-foreground px-8 py-3 rounded-lg font-bold 
+    @apply bg-secondary text-secondary-foreground px-8 py-3 font-bold 
            hover:bg-secondary/90 hover:scale-105 
            transition-[var(--transition-smooth)];
   }
   
   .btn-outline {
-    @apply border border-primary text-primary bg-transparent px-8 py-3 rounded-lg font-bold 
+    @apply border border-primary text-primary bg-transparent px-8 py-3 font-bold 
            hover:bg-primary hover:text-primary-foreground hover:shadow-[var(--shadow-glow)]
            transition-[var(--transition-smooth)];
   }
 
   /* Text Effects */
   .text-gradient {
-    @apply bg-[var(--gradient-rebel)] bg-clip-text text-transparent;
+    @apply text-primary;
   }
   
   .text-glitch {
@@ -176,30 +176,28 @@ All colors MUST be HSL.
 
   /* Cards */
   .card-rebel {
-    @apply bg-card border border-border rounded-xl p-6 
+    @apply bg-card border border-border p-6 
            hover:border-primary/50 hover:shadow-[var(--shadow-dark)]
            transition-[var(--transition-smooth)];
   }
   
   .card-glow {
-    @apply bg-card border border-border rounded-xl p-6 
+    @apply bg-card border border-border p-6 
            hover:border-primary hover:shadow-[var(--shadow-rebel)]
            transition-[var(--transition-smooth)] relative overflow-hidden;
   }
-  
-  .card-glow::before {
-    content: '';
-    @apply absolute inset-0 bg-[var(--gradient-glow)] opacity-0 
-           hover:opacity-100 transition-opacity duration-300 pointer-events-none;
-  }
 
   /* Backgrounds */
-  .bg-gradient-rebel {
-    background: var(--gradient-rebel);
+  .bg-solid-rebel {
+    background: var(--solid-rebel);
   }
   
-  .bg-gradient-dark {
-    background: var(--gradient-dark);
+  .bg-solid-dark {
+    background: var(--solid-dark);
+  }
+  
+  .bg-solid-purple {
+    background: var(--solid-purple);
   }
 
   /* Section Spacing */

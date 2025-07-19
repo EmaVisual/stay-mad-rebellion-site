@@ -19,9 +19,11 @@ const Header = () => {
         <div className="flex items-center justify-between py-4">
           {/* Logo */}
           <div className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-gradient-rebel rounded-lg flex items-center justify-center">
-              <Zap className="w-6 h-6 text-white" />
-            </div>
+            <img 
+              src="/lovable-uploads/b1e24d46-cd59-4e3f-b6a6-260ce35ef98a.png" 
+              alt="Stay Mad Agency" 
+              className="w-10 h-10"
+            />
             <div className="text-xl font-heading font-bold tracking-wider text-gradient">
               STAY MAD
             </div>

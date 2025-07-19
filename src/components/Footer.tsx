@@ -43,17 +43,27 @@ const Footer = () => {
   const contactInfo = [
     {
       icon: Mail,
-      text: "hola@staymadagency.com",
-      href: "mailto:hola@staymadagency.com"
+      text: "rock@staymadagency.com",
+      href: "mailto:rock@staymadagency.com"
     },
     {
       icon: Phone,
-      text: "+52 (55) 1234-5678",
-      href: "tel:+525512345678"
+      text: "+57 319 660 2100",
+      href: "https://wa.me/573196602100"
+    },
+    {
+      icon: Phone,
+      text: "+58 412 059 1116",
+      href: "https://wa.me/584120591116"
     },
     {
       icon: MapPin,
-      text: "Ciudad de México, México",
+      text: "Bogotá DC, Colombia",
+      href: "#"
+    },
+    {
+      icon: MapPin,
+      text: "Barquisimeto, Venezuela",
       href: "#"
     }
   ];
@@ -66,9 +76,11 @@ const Footer = () => {
           {/* Brand Section */}
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-2 mb-6">
-              <div className="w-10 h-10 bg-gradient-rebel rounded-lg flex items-center justify-center">
-                <Zap className="w-6 h-6 text-white" />
-              </div>
+              <img 
+                src="/lovable-uploads/b1e24d46-cd59-4e3f-b6a6-260ce35ef98a.png" 
+                alt="Stay Mad Agency" 
+                className="w-10 h-10"
+              />
               <div className="text-xl font-heading font-bold tracking-wider text-gradient">
                 STAY MAD
               </div>
@@ -133,7 +145,7 @@ const Footer = () => {
               <input
                 type="email"
                 placeholder="tu@email.com"
-                className="flex-1 px-4 py-3 bg-dark-surface border border-border rounded-lg text-foreground placeholder-muted-foreground focus:border-primary focus:outline-none"
+                className="flex-1 px-4 py-3 bg-dark-surface border border-border text-foreground placeholder-muted-foreground focus:border-primary focus:outline-none"
               />
               <button className="btn-rebel whitespace-nowrap">
                 Suscribirse
@@ -141,20 +153,30 @@ const Footer = () => {
             </div>
           </div>
         </div>
+        
+        {/* Logo de texto */}
+        <div className="mt-12 text-center">
+          <img 
+            src="/lovable-uploads/dfe0f2d6-a741-494b-a718-734688957d32.png" 
+            alt="Stay Mad Agency" 
+            className="mx-auto max-w-md w-full h-auto"
+          />
+        </div>
 
         {/* Social Media & Legal */}
         <div className="mt-12 pt-8 border-t border-border">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
+
             {/* Social Links */}
             <div className="flex items-center space-x-6">
               <span className="text-sm text-muted-foreground">Síguenos:</span>
               {socialLinks.map((social, index) => (
-                <a
+                 <a
                   key={index}
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 bg-card border border-border rounded-lg flex items-center justify-center hover:border-primary hover:bg-primary/10 transition-colors group"
+                  className="w-10 h-10 bg-card border border-border flex items-center justify-center hover:border-primary hover:bg-primary/10 transition-colors group"
                   aria-label={social.label}
                 >
                   <social.icon className="w-5 h-5 text-muted-foreground group-hover:text-primary" />
@@ -189,7 +211,7 @@ const Footer = () => {
       </div>
 
       {/* Top Border Effect */}
-      <div className="h-1 bg-gradient-rebel"></div>
+      <div className="h-1 bg-solid-rebel"></div>
     </footer>
   );
 };
